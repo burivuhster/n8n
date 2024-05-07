@@ -3,6 +3,7 @@ import { VersionedNodeType } from 'n8n-workflow';
 
 import { TodoistV1 } from './v1/TodoistV1.node';
 import { TodoistV2 } from './v2/TodoistV2.node';
+import { TodoistV3 } from './v3/TodoistV3.node';
 
 export class Todoist extends VersionedNodeType {
 	constructor() {
@@ -11,7 +12,7 @@ export class Todoist extends VersionedNodeType {
 			name: 'todoist',
 			icon: 'file:todoist.svg',
 			group: ['output'],
-			defaultVersion: 2,
+			defaultVersion: 3,
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
 			description: 'Consume Todoist API',
 		};
@@ -19,6 +20,7 @@ export class Todoist extends VersionedNodeType {
 		const nodeVersions: IVersionedNodeType['nodeVersions'] = {
 			1: new TodoistV1(baseDescription),
 			2: new TodoistV2(baseDescription),
+			3: new TodoistV3(baseDescription),
 		};
 
 		super(nodeVersions, baseDescription);
