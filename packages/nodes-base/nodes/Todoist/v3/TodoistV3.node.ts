@@ -16,21 +16,6 @@ import { todoistApiRequest } from '../GenericFunctions';
 import type { OperationType } from './Service';
 import { TodoistService } from './Service';
 
-// interface IBodyCreateTask {
-// 	content?: string;
-// 	description?: string;
-// 	project_id?: number;
-// 	section_id?: number;
-// 	parent_id?: number;
-// 	order?: number;
-// 	label_ids?: number[];
-// 	priority?: number;
-// 	due_string?: string;
-// 	due_datetime?: string;
-// 	due_date?: string;
-// 	due_lang?: string;
-// }
-
 const versionDescription: INodeTypeDescription = {
 	displayName: 'Todoist',
 	name: 'todoist',

@@ -29,28 +29,6 @@ export interface SyncRequest {
 	temp_id_mapping?: IDataObject;
 }
 
-export interface BaseMoveCommandArgs {
-	id: string;
-}
-
-export interface MoveCommandToParentArgs extends BaseMoveCommandArgs {
-	parent_id: never;
-	section_id: never;
-	project_id: string;
-}
-
-export interface MoveCommandToProjectArgs extends BaseMoveCommandArgs {
-	parent_id: never;
-	section_id: never;
-	project_id: string;
-}
-
-export interface MoveCommandToSectionArgs extends BaseMoveCommandArgs {
-	parent_id: never;
-	section_id: string;
-	project_id: never;
-}
-
 export interface BaseCommandArgs {
 	id?: string;
 	parent_id?: string;
